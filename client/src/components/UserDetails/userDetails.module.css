@@ -1,0 +1,61 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left .imgDiv{
+    margin-bottom: 20px;    
+}
+
+.right .btns{
+    display: flex;
+    justify-content: flex-end;  
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.right  .btns Button:first-child{
+    background-color: rgb(2, 2, 221);
+}
+
+.right  .btns Button:first-child:hover{
+    background-color: rgb(1, 1, 153);
+}
+
+.right  .btns Button:last-child{
+    background-color: red;
+}
+
+.right  .btns Button:last-child:hover{
+    background-color: rgb(185, 2, 2);
+}
+
+
+ .left > h5 > span, .right > h5 > span{
+    font-size: 15px;
+}
+
+.right > h5:last-child{
+    width: 500px;
+}
+
+
+
+@media screen and (max-width:790px) {
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}

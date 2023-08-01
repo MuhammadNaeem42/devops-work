@@ -1,0 +1,49 @@
+.form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form div > input{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    outline-style: none;
+    padding: 10px;
+}
+
+.form div > input:focus{
+    box-shadow: 0px 0px 2px  lightgray;
+}
+
+.form div > textarea{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    outline-style: none;
+    height: 150px;
+    padding: 10px;
+    resize: none;
+}
+.form div > textarea:focus{
+    box-shadow: 0px 0px 2px  lightgray;
+}
+
+.form div > label > span {
+    color: red;
+}
+.form > .forAddress{
+    display: grid;
+    grid-column:1/-1;
+    grid-row: 3/4;
+}
+
+.form > .forBtn{
+    display: grid;
+    grid-row: 4/5;
+    grid-column: 1/-1;
+}

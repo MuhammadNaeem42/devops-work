@@ -1,0 +1,40 @@
+.add_btn{
+    text-align: right;  
+}
+table, th, td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+tr:first-child{
+    background-color: black;
+    color: white;
+}
+
+th, td{
+    padding: 15px;
+}
+td  .readBtn{
+    background-color: green;
+}
+
+td .editBtn{
+    background-color: rgb(2, 2, 221);
+}
+
+td > .editBtn:hover{
+    background-color: rgb(1, 1, 153);
+}
+
+
+td > .readBtn:hover{
+    background-color: rgb(1, 75, 1);
+}
+
+td > .deleteBtn{
+    background-color: red;
+}
+
+td > .deleteBtn:hover{
+    background-color: rgb(185, 2, 2);
+}

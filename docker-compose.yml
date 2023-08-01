@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+ 
+  # Client service
+  client:
+    build: ./client
+    image: client:latest
+    container_name: my_client
+    
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - server
+    networks:
+      - mern
+
+    # Server service
+  server:
+    build: ./server
+    image: server:latest
+    container_name: my_server
+    restart: always
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongodb
+    networks:
+      - mern
+
+
+  mongodb:
+    image: mongo:latest
+    container_name: my_mongodb
+    restart: always
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - mern
+
+ 
+volumes:
+  mongo_data:
+
+networks:
+ mern:
+  driver: bridge
